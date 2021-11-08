@@ -6,18 +6,20 @@ Allows a user to search a transit stop number for the next arriving transit vehi
 
 GCRTA relies on [NextConnect software](http://nextconnect.riderta.com/) to track transit vehicle locations and predicted arrival times at all transit stops. GCRTA provides access to this information [on its website](http://nextconnect.riderta.com/LiveDepartureTimes), where users can search for next arriving vehicles, but only with limited search criteria. There presently is no method to search by Stop Name or 5-digit Stop #.
 
-This API merges data from the agency's GTFS and NextConnect systems to allow for easy search-by-stop in a way not otherwise available to users. The three supporting json/geojson files are required to tied together the two GTFS and NexctConnect systems. With this app, you can build all sorts of real-time arrival programs or displays.
+This API merges data from the agency's GTFS and NextConnect systems to allow for easy search-by-stop in a way not otherwise available to users. The three supporting json/geojson files are required to tie together the GTFS and NextConnect systems. With this app, you can build all sorts of real-time arrival programs or displays.
 
-For example, this API is presently used for a real-time SMS text-based system for riders without data plans or smartphones using Twilio virtual phone numbers. This app uses the JSON data to construct a useful text message for riders. If a rider sends the below 5-digit Stop # (often displayed on the signs) to the virtual number,
+For example, this API is presently used for a real-time SMS text-based system for riders without data plans or smartphones using Twilio virtual phone numbers. This app uses the JSON data to construct a useful text message for riders. If a rider sends a 5-digit Stop # (often displayed on the signs) by SMS text message, e.g.,
 ```
 03457
 ```
-the following text message is returned
+then the following text message is returned to the sender
 ```
 DETROIT AV & W 65TH ST
 26: 1131a, 1147a
 26A: 1117a
 ```
+
+Other potential uses could be in development of an Arduino/RPi device for use at transit stops/shelters, or other user-focused displays similar to [TransitScreen](https://transitscreen.com/products/transitscreen/).
 
 ## Getting Started
 
