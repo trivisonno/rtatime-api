@@ -31,7 +31,7 @@ Ensure that you have Python 3 installed on your system. I recommend using pipenv
 
 ### Installing
 
-* Close the repo into your local directory for testing
+* Clone the repo into your local directory for testing
 * Create a pipenv for your pip packages such as flask and/or zappa
 ```
 $ git clone https://www.github.com/trivisonno/rtatime-api
